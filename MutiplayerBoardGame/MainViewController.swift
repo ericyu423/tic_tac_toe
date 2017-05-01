@@ -60,7 +60,10 @@ class MainViewController: UIViewController {
         return v
     }()
     func handleTapped (_ sender: UITapGestureRecognizer){
-        print(sender.view!.tag)
+        //MARK: Add conditions, player, and isActive
+        
+        
+        (sender.view! as! gamePieceView).drawItO()
     }
  
     let stackView: [UIStackView] = {
@@ -202,8 +205,6 @@ extension MainViewController {
     }
     func handlePlayButton(){
         boardView.drawIt()
-        pView[0].drawItO()
-        
     }
     func handleTapOnPieces(_ sender: UIButton){
         print(sender.tag)
