@@ -67,12 +67,13 @@ class gamePieceView: UIView {
     {
     }
     */
+ 
     
     func drawItO(){
         let fc = CGPoint(x: frame.width/2, y: frame.height/2)
        
         path.addArc(withCenter: fc , radius: frame.height/2.2, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
-       
+      // path.stroke() needs to be inside draw to work
         shapeLayer.path = path.cgPath
         layer.addSublayer(shapeLayer)
         shapeLayer.add(animation, forKey: "drawLineAnimation")
@@ -92,8 +93,13 @@ class gamePieceView: UIView {
         layer.addSublayer(shapeLayer2)
         
         shapeLayer2.add(animation, forKey: "drawLineAnimation")
-        
-        
+   
+    }
+    func clear(){
+        guard let sublayers = self.layer.sublayers else { return }
+        for layer in sublayers {
+            layer.removeFromSuperlayer()
+        }
     }
     
 

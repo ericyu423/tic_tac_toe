@@ -53,6 +53,7 @@ class MainViewController: UIViewController {
             bt.tag = i
             bt.isUserInteractionEnabled = true
             bt.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapped)))
+            bt.clearsContextBeforeDrawing = true
  
             v.append(bt)
         }
@@ -205,6 +206,8 @@ extension MainViewController {
     }
     func handlePlayButton(){
         boardView.drawIt()
+        
+        for i in 0...8 { pView[i].clear()}
     }
     func handleTapOnPieces(_ sender: UIButton){
         print(sender.tag)
