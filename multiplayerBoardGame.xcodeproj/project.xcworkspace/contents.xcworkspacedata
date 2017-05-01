@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MutiplayerBoardGame.xcodeproj">
+      location = "self:/Users/ericyu423/Desktop/MutiplayerBoardGame/multiplayerBoardGame.xcodeproj">
    </FileRef>
 </Workspace>

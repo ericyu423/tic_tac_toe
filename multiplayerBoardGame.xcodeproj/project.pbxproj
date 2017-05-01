@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D495AAF01EB38EB80005A605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AAEF1EB38EB80005A605 /* AppDelegate.swift */; };
-		D495AAF21EB38EB80005A605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AAF11EB38EB80005A605 /* ViewController.swift */; };
-		D495AAF51EB38EB80005A605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D495AAF31EB38EB80005A605 /* Main.storyboard */; };
+		D495AAF21EB38EB80005A605 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AAF11EB38EB80005A605 /* MainViewController.swift */; };
 		D495AAF71EB38EB80005A605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D495AAF61EB38EB80005A605 /* Assets.xcassets */; };
 		D495AAFA1EB38EB80005A605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D495AAF81EB38EB80005A605 /* LaunchScreen.storyboard */; };
+		D495AB021EB3A1300005A605 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AB011EB3A1300005A605 /* extension.swift */; };
+		D495AB061EB41F420005A605 /* TicTacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AB051EB41F420005A605 /* TicTacView.swift */; };
+		D495AB0F1EB5A9AD0005A605 /* gamePieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AB0E1EB5A9AD0005A605 /* gamePieceView.swift */; };
+		D495AB111EB6993E0005A605 /* MultiPlayerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495AB101EB6993E0005A605 /* MultiPlayerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D495AAEC1EB38EB80005A605 /* MutiplayerBoardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MutiplayerBoardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D495AAEC1EB38EB80005A605 /* multiplayerBoardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiplayerBoardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D495AAEF1EB38EB80005A605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D495AAF11EB38EB80005A605 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D495AAF41EB38EB80005A605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D495AAF11EB38EB80005A605 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D495AAF61EB38EB80005A605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D495AAF91EB38EB80005A605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D495AAFB1EB38EB80005A605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D495AB011EB3A1300005A605 /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		D495AB051EB41F420005A605 /* TicTacView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacView.swift; sourceTree = "<group>"; };
+		D495AB0E1EB5A9AD0005A605 /* gamePieceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePieceView.swift; sourceTree = "<group>"; };
+		D495AB101EB6993E0005A605 /* MultiPlayerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPlayerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +44,7 @@
 		D495AAE31EB38EB80005A605 = {
 			isa = PBXGroup;
 			children = (
-				D495AAEE1EB38EB80005A605 /* MutiplayerBoardGame */,
+				D495AAEE1EB38EB80005A605 /* multiplayerBoardGame */,
 				D495AAED1EB38EB80005A605 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +52,34 @@
 		D495AAED1EB38EB80005A605 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D495AAEC1EB38EB80005A605 /* MutiplayerBoardGame.app */,
+				D495AAEC1EB38EB80005A605 /* multiplayerBoardGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D495AAEE1EB38EB80005A605 /* MutiplayerBoardGame */ = {
+		D495AAEE1EB38EB80005A605 /* multiplayerBoardGame */ = {
 			isa = PBXGroup;
 			children = (
 				D495AAEF1EB38EB80005A605 /* AppDelegate.swift */,
-				D495AAF11EB38EB80005A605 /* ViewController.swift */,
-				D495AAF31EB38EB80005A605 /* Main.storyboard */,
+				D495AAF11EB38EB80005A605 /* MainViewController.swift */,
+				D495AB101EB6993E0005A605 /* MultiPlayerHandler.swift */,
+				D495AB011EB3A1300005A605 /* extension.swift */,
+				D495AB051EB41F420005A605 /* TicTacView.swift */,
+				D495AB0E1EB5A9AD0005A605 /* gamePieceView.swift */,
 				D495AAF61EB38EB80005A605 /* Assets.xcassets */,
 				D495AAF81EB38EB80005A605 /* LaunchScreen.storyboard */,
 				D495AAFB1EB38EB80005A605 /* Info.plist */,
 			);
+			name = multiplayerBoardGame;
 			path = MutiplayerBoardGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D495AAEB1EB38EB80005A605 /* MutiplayerBoardGame */ = {
+		D495AAEB1EB38EB80005A605 /* multiplayerBoardGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D495AAFE1EB38EB80005A605 /* Build configuration list for PBXNativeTarget "MutiplayerBoardGame" */;
+			buildConfigurationList = D495AAFE1EB38EB80005A605 /* Build configuration list for PBXNativeTarget "multiplayerBoardGame" */;
 			buildPhases = (
 				D495AAE81EB38EB80005A605 /* Sources */,
 				D495AAE91EB38EB80005A605 /* Frameworks */,
@@ -79,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = MutiplayerBoardGame;
+			name = multiplayerBoardGame;
 			productName = MutiplayerBoardGame;
-			productReference = D495AAEC1EB38EB80005A605 /* MutiplayerBoardGame.app */;
+			productReference = D495AAEC1EB38EB80005A605 /* multiplayerBoardGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D495AAE71EB38EB80005A605 /* Build configuration list for PBXProject "MutiplayerBoardGame" */;
+			buildConfigurationList = D495AAE71EB38EB80005A605 /* Build configuration list for PBXProject "multiplayerBoardGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -114,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D495AAEB1EB38EB80005A605 /* MutiplayerBoardGame */,
+				D495AAEB1EB38EB80005A605 /* multiplayerBoardGame */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +136,6 @@
 			files = (
 				D495AAFA1EB38EB80005A605 /* LaunchScreen.storyboard in Resources */,
 				D495AAF71EB38EB80005A605 /* Assets.xcassets in Resources */,
-				D495AAF51EB38EB80005A605 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +146,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D495AAF21EB38EB80005A605 /* ViewController.swift in Sources */,
+				D495AB0F1EB5A9AD0005A605 /* gamePieceView.swift in Sources */,
+				D495AB021EB3A1300005A605 /* extension.swift in Sources */,
+				D495AAF21EB38EB80005A605 /* MainViewController.swift in Sources */,
+				D495AB061EB41F420005A605 /* TicTacView.swift in Sources */,
 				D495AAF01EB38EB80005A605 /* AppDelegate.swift in Sources */,
+				D495AB111EB6993E0005A605 /* MultiPlayerHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D495AAF31EB38EB80005A605 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D495AAF41EB38EB80005A605 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D495AAF81EB38EB80005A605 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +293,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D495AAE71EB38EB80005A605 /* Build configuration list for PBXProject "MutiplayerBoardGame" */ = {
+		D495AAE71EB38EB80005A605 /* Build configuration list for PBXProject "multiplayerBoardGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D495AAFC1EB38EB80005A605 /* Debug */,
@@ -297,13 +302,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D495AAFE1EB38EB80005A605 /* Build configuration list for PBXNativeTarget "MutiplayerBoardGame" */ = {
+		D495AAFE1EB38EB80005A605 /* Build configuration list for PBXNativeTarget "multiplayerBoardGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D495AAFF1EB38EB80005A605 /* Debug */,
 				D495AB001EB38EB80005A605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

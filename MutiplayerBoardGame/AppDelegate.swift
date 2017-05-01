@@ -12,10 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var multiplayerHandler:MultiPlayerHandler = MultiPlayerHandler()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let nav1 = UINavigationController()
+        let mainView = MainViewController(nibName: nil, bundle: nil)
+        
+        nav1.viewControllers = [mainView]
+        self.window!.rootViewController = nav1
+
+        self.window?.makeKeyAndVisible()
+        
+        
+        
+       
         return true
     }
 
