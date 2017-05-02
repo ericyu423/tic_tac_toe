@@ -8,6 +8,14 @@
 
 import UIKit
 
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi / 180 }
+}
+extension FloatingPoint {
+    var degree: Self { return self * .pi / 180 }
+    var radiansToDegrees: Self { return self * 180 / .pi }
+}
+
 public func drawLineFromPointToPoint(startX: Int, toEndingX endX: Int, startingY startY: Int, toEndingY endY: Int, ofColor lineColor: UIColor, widthOfLine lineWidth: CGFloat, inView view: UIView) {
     
     let path = UIBezierPath()

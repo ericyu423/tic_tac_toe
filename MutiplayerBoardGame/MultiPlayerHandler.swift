@@ -18,7 +18,7 @@ enum Notes: String {
         return Notification.Name(rawValue: self.rawValue )
     }
 }
-class MultiPlayerHandler: NSObject,MCSessionDelegate {
+class MultiPlayerHandler: NSObject,MCSessionDelegate,MCAdvertiserAssistantDelegate {
     //MARK: Variables
     var mcPeerID:MCPeerID!
     var mcSession:MCSession!
@@ -45,6 +45,7 @@ class MultiPlayerHandler: NSObject,MCSessionDelegate {
     func advertiseSelf(advertise:Bool){
         if advertise {
             mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "my-game", discoveryInfo: nil, session: mcSession)
+            mcAdvertiserAssistant.start()
         }else{
             mcAdvertiserAssistant!.stop()
             mcAdvertiserAssistant = nil
@@ -66,7 +67,7 @@ class MultiPlayerHandler: NSObject,MCSessionDelegate {
     
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        let userInfo:[String : Any] = ["date":data,"peerID":peerID]
+        let userInfo:[String : Any] = ["data":data,"peerID":peerID]
         DispatchQueue.main.async() {
             NotificationCenter.default.post(name: Notes.didReceive.notification, object: nil, userInfo: userInfo)
             

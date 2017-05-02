@@ -19,9 +19,9 @@ class gamePieceView: UIView {
         
         if activated == false {
             if player == "x" {
-                 drawItO()
-            }else{
                  drawItX()
+            }else{
+                 drawItO()
             }
         }
     }
@@ -69,19 +69,20 @@ class gamePieceView: UIView {
     */
  
     
+    
     func drawItO(){
+        allowMutipleClick()
         let fc = CGPoint(x: frame.width/2, y: frame.height/2)
-       
-        path.addArc(withCenter: fc , radius: frame.height/2.2, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        path.addArc(withCenter: fc , radius: frame.height/2.2, startAngle: CGFloat(-Double.pi*(2/4)), endAngle:CGFloat(Double.pi*(6/4)) , clockwise: true)
       // path.stroke() needs to be inside draw to work
         shapeLayer.path = path.cgPath
         layer.addSublayer(shapeLayer)
         shapeLayer.add(animation, forKey: "drawLineAnimation")
-     
+
     }
     
     func drawItX(){
-        
+        allowMutipleClick()
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: frame.width, y: frame.height))
         path.move(to: CGPoint(x: frame.width, y: 0))
@@ -96,11 +97,23 @@ class gamePieceView: UIView {
    
     }
     func clear(){
-        guard let sublayers = self.layer.sublayers else { return }
+     
+        guard let sublayers = self.layer.sublayers else { return}
+        
         for layer in sublayers {
+            
             layer.removeFromSuperlayer()
         }
+        
+        path.removeAllPoints()//if old path not removed animation became faster
+    }
+    
+    func allowMutipleClick(){
+        //clear previous path so animation won't speed up after mutiple clicks
+        path.removeAllPoints()
     }
     
 
 }
+
+
