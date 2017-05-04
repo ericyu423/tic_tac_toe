@@ -21,16 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let nav1 = UINavigationController()
+        let navigation = UINavigationController()
         let mainView = MainViewController(nibName: nil, bundle: nil)
         
-        nav1.viewControllers = [mainView]
-        self.window!.rootViewController = nav1
-
+            navigation.viewControllers = [mainView]
+        
+        self.window!.rootViewController = navigation
         self.window?.makeKeyAndVisible()
-        
-        
-        
+    
        
         return true
     }

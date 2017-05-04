@@ -70,9 +70,7 @@ class MultiPlayerHandler: NSObject,MCSessionDelegate,MCAdvertiserAssistantDelega
         let userInfo:[String : Any] = ["data":data,"peerID":peerID]
         DispatchQueue.main.async() {
             NotificationCenter.default.post(name: Notes.didReceive.notification, object: nil, userInfo: userInfo)
-            
-        
-            
+      
         }
        
 

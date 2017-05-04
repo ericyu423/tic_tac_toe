@@ -36,21 +36,18 @@ class TicTacView: UIView {
     }()
         override func draw(_ rect: CGRect) {
           
-           
          
-         
-            
             path.move(to: CGPoint(x: 0, y: self.frame.height/3))
             path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height/3))
-            //path.stroke()
+            
             //x ln 2
             path.move(to: CGPoint(x: 0, y: self.frame.height * (2/3)))
             path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height * (2/3)))
-            //path.stroke()
+         
             //y ln 1
             path.move(to: CGPoint(x: self.frame.width/3, y: 0))
             path.addLine(to: CGPoint(x: self.frame.width/3, y: self.frame.height))
-           // path.stroke()
+          
             //y ln2
             path.move(to: CGPoint(x: self.frame.width * (2/3), y: 0))
             path.addLine(to: CGPoint(x: self.frame.width * (2/3), y: self.frame.height))

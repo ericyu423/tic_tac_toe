@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
     
     lazy var pView:[gamePieceView] = {
         var v = [gamePieceView]()
-        for i in 1...9 {
+        for i in 0...8 {
             var bt = gamePieceView()
             bt.backgroundColor = .clear
             bt.tag = i
@@ -125,8 +125,8 @@ class MainViewController: UIViewController {
             
             //get  string from json dict
             
-            var view:Int? = message.object(forKey: "field") as? Int
-            var player:String? = message.object(forKey: "player") as? String
+            let view:Int? = message.object(forKey: "field") as? Int
+            let player:String? = message.object(forKey: "player") as? String
             
             if view != nil && player != nil {
                 pView[view!].player = player
@@ -142,10 +142,7 @@ class MainViewController: UIViewController {
                 
                 
             }
-                
-            
-            
-            
+    
             
         }catch{
             
@@ -201,18 +198,11 @@ extension MainViewController{
         playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         playButton.widthAnchor.constraint(equalToConstant: view.frame.width/3).isActive = true
-        
-        
-        
+       
     }
     
     func layoutPieces() {
-  /*
-        view.addSubview(stackView[0])
-        view.addSubview(stackView[1])
-        view.addSubview(stackView[2])*/
-        
-        
+ 
         boardView.addSubview(stackView[0])
         boardView.addSubview(stackView[1])
         boardView.addSubview(stackView[2])
@@ -275,8 +265,14 @@ extension MainViewController{
     }
     func handleTapped (_ sender: UITapGestureRecognizer){
         //MARK: Add conditions, player, and isActive
+        
+        
+        
         let tappedView = sender.view! as! gamePieceView
         tappedView.setPlayer(player: currentPlayer)
+        
+        print(view.tag)
+        
         let messageDict:[String:Any] = ["field":tappedView.tag, "player":currentPlayer]
         
        
@@ -289,12 +285,7 @@ extension MainViewController{
         }
         
         //TODO: check Result
-    
-      
-        
-       
-    
-    
+  
     }
   
 }
